@@ -1,0 +1,9 @@
+---
+label: 'Component: Office image'
+hide_body: true
+fields:
+- name: image
+  type: file
+  config:
+    maxSize: 1
+  label: Image

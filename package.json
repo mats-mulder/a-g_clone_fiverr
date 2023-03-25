@@ -1,0 +1,32 @@
+{
+  "name": "aronsgelauff-architecten",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxt/content": "^1.9.0",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/firebase": "^8.2.2",
+    "@nuxtjs/i18n": "^7.2.0",
+    "bootstrap": "^4.5.2",
+    "bootstrap-vue": "^2.17.3",
+    "core-js": "^3.6.5",
+    "firebase": "^9.13.0",
+    "http-server": "^14.1.0",
+    "lottie-web-vue": "^1.2.1",
+    "nuxt": "^2.14.6",
+    "vue-multiselect": "^2.1.6"
+  },
+  "devDependencies": {
+    "@nuxtjs/style-resources": "^1.2.1",
+    "fibers": "^5.0.0",
+    "nuxt-gsap-module": "^1.6.0",
+    "sass": "^1.45.2",
+    "sass-loader": "^10.2.0"
+  }
+}

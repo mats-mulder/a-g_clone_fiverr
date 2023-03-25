@@ -1,0 +1,370 @@
+.bg-highlight{
+  background-color: $highlight;
+}
+
+.text-highlight{
+  color: $highlight;
+}
+
+.bg-background{
+  background-color: $background;
+}
+
+.text-background{
+  color: $background;
+}
+
+.bg-black{
+  background-color: black;
+}
+
+.text-black{
+  color: black;
+}
+
+.bg-mid{
+  background-color: $mid;
+}
+
+.text-mid{
+  color: $mid;
+}
+
+h1, h2, h3{
+  font-family: 'Playfair Display', serif;
+}
+
+h4, h5, h6, p, a{
+  font-family: 'Overpass', sans-serif;
+}
+
+a p{
+  margin-bottom: 0;
+}
+
+p, a{
+  font-size: 1rem;
+}
+
+h1{
+  font-size: 8rem;
+  font-weight: 400;
+}
+
+h2{
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+h3{
+  font-size: 2.5rem;
+}
+
+h4{
+  font-size: 2rem;
+}
+
+h5{
+  font-size: 1.7rem;
+}
+
+h6{
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.full-page-image{
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  object-position: center;
+}
+
+.full-stretch-image{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.full-height-container{
+  position: relative;
+  height: 100vh;
+}
+
+.vertical-horizontal-center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.vertical-center{
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.vertical-divider{
+  height: 100%;
+  width: 10px;
+}
+
+.horizontal-divider{
+  width: 100%;
+  height: 10px;
+}
+
+.btn-round{
+  border: 1.5px solid;
+  border-radius: 30px;
+  padding: 13px 35px 9px 35px;
+  transition: 100ms;
+  font-family: 'Overpass', sans-serif;
+
+  &:hover{
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+.full-image-background{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.btn-green{
+  background: $mid;
+  border-color: $mid;
+  color: $black;
+
+  &:hover{
+    background: $dark-green;
+    border-color: $dark-green;
+    color: black;
+  }
+}
+
+.btn-pink{
+  background: $highlight;
+  border-color: $highlight;
+  color: $black!important;
+
+  &:hover{
+    background: $light-pink!important;
+    border-color: $light-pink;
+  }
+}
+
+.btn-white{
+  background: white;
+  border-color: $highlight;
+  color: $black!important;
+
+  &:hover{
+    background: $light-pink!important;
+    border-color: $light-pink;
+  }
+}
+
+
+.social-logo{
+  width: 75px;
+  height: 75px;
+
+  &:hover{
+    transform: scale(0.95);
+  }
+}
+
+.multiselect__option--highlight {
+  background: $mid!important;
+}
+
+.multiselect__option--highlight::after{
+  background: $mid!important;
+}
+
+.multiselect__option--selected{
+  background: $highlight!important;
+}
+
+.multiselect__option--selected::after{
+  background: $highlight!important;
+}
+.multiselect__tag{
+  background-color: $mid!important;
+}
+
+//.multiselect__tags{
+//  background-color: $background!important;
+//  border: 1px solid black!important;
+//  border-radius: 0!important;
+//}
+
+@media (max-width: $breakpoint-xl) {
+  p, a{
+    font-size: 1rem;
+  }
+
+  h1{
+    font-size: 6rem;
+    font-weight: 400;
+  }
+
+  h2{
+    font-size: 3rem;
+    font-weight: 400;
+  }
+
+  h3{
+    font-size: 2rem;
+  }
+
+  h4{
+    font-size: 1.8rem;
+  }
+
+  h5{
+    font-size: 1.5rem;
+  }
+
+  h6{
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+}
+
+@media (max-width: $breakpoint-lg) {
+
+  h1{
+    font-size: 5rem;
+    font-weight: 400;
+  }
+
+  h2{
+    font-size: 2.6rem;
+    font-weight: 400;
+  }
+
+  h3{
+    font-size: 1.8rem;
+  }
+
+  h4{
+    font-size: 1.6rem;
+  }
+
+  h5{
+    font-size: 1.5rem;
+  }
+
+  h6{
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  p, a, .btn-round{
+    font-size: 0.9rem;
+  }
+
+  .social-logo{
+    width: 70px;
+    height: 70px;
+  }
+
+
+}
+
+@media (max-width: $breakpoint-md) {
+
+  h1{
+    font-size: 4rem;
+    font-weight: 400;
+  }
+
+  h2{
+    font-size: 2.4rem;
+    font-weight: 400;
+  }
+
+  h3{
+    font-size: 1.6rem;
+  }
+
+  h4{
+    font-size: 1.5rem;
+  }
+
+  h5{
+    font-size: 1.3rem;
+  }
+
+  h6{
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+
+  p, a, .btn-round{
+    font-size: 0.9rem;
+  }
+
+  .btn-round{
+    padding: 6px 30px 3px 30px;
+  }
+  .social-logo{
+    width: 65px;
+    height: 65px;
+  }
+
+  #desc-bar{
+    position: absolute;
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  h1{
+    font-size: 2.8rem;
+    font-weight: 400;
+  }
+
+  h2{
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  h3{
+    font-size: 1.5rem;
+  }
+
+  h4{
+    font-size: 1.3rem;
+  }
+
+  h5{
+    font-size: 1.2rem;
+  }
+
+  h6{
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  p, a, .btn-round{
+    font-size: 0.8rem;
+  }
+
+
+  .btn-round{
+    font-size: 0.8rem;
+    padding: 6px 30px 3px 30px;
+  }
+
+  .social-logo{
+    width: 60px;
+    height: 60px;
+  }
+}
+

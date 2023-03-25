@@ -1,0 +1,280 @@
+---
+label: Project
+hide_body: true
+fields:
+- name: types
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: simple
+    options:
+    - Publiek
+    - Commercieel
+    - Zorg
+    - Gemengd
+    - Wonen - sociale sector
+    - Wonen - midden sector
+    - Wonen - vrije sector
+  label: Types
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: introduction
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Introduction
+- name: banner_image
+  type: file
+  config:
+    maxSize: 2
+  label: Banner Image
+- name: context
+  type: field_group
+  config: {}
+  fields:
+  - name: content
+    type: textarea
+    default: ''
+    config:
+      required: true
+      wysiwyg: true
+      schema:
+        format: html-blocks
+    label: Content
+  - name: related_articles
+    type: field_group_list
+    fields:
+    - name: title
+      type: text
+      config:
+        required: true
+      label: Title
+    - name: link
+      type: text
+      config:
+        required: true
+      label: Link
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Related articles
+  - name: labels
+    type: field_group_list
+    fields:
+    - name: title
+      type: text
+      config:
+        required: true
+      label: Title
+    - name: content
+      type: textarea
+      default: ''
+      config:
+        required: true
+        wysiwyg: true
+        schema:
+          format: html-blocks
+      label: Content
+    config:
+      min: 
+      max: 
+      labelField: title
+    label: Labels
+  - name: image
+    type: file
+    config:
+      maxSize: 1
+    label: Image
+  label: Context
+- name: proces
+  type: field_group
+  config: {}
+  fields:
+  - name: image
+    type: file
+    config:
+      maxSize: 1
+    label: Image
+  - name: content
+    type: textarea
+    default: ''
+    config:
+      required: true
+      wysiwyg: true
+      schema:
+        format: html-blocks
+    label: Content
+  - name: quote
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Quote
+  label: Proces
+- name: resultaat
+  type: field_group
+  config: {}
+  fields:
+  - name: content_block_a
+    type: field_group
+    config: {}
+    fields:
+    - name: title
+      type: text
+      config:
+        required: true
+      label: Title
+    - name: content
+      type: textarea
+      default: ''
+      config:
+        required: true
+        wysiwyg: false
+        schema:
+          format: markdown
+      label: Content
+    - name: image_a
+      type: file
+      config:
+        maxSize: 1
+      label: Image A
+    - name: image_b
+      type: file
+      config:
+        maxSize: 1
+      label: Image B
+    label: Content block A
+    hidden: true
+  - name: content_block_b
+    type: field_group
+    config: {}
+    fields:
+    - name: title
+      type: text
+      config:
+        required: true
+      label: Title
+    - name: content
+      type: textarea
+      default: ''
+      config:
+        required: true
+        wysiwyg: false
+        schema:
+          format: markdown
+      label: Content
+    - name: image_a
+      type: file
+      config:
+        maxSize: 1
+      label: Image A
+    - name: image_b
+      type: file
+      config:
+        maxSize: 1
+      label: Image B
+    label: Content block B
+    hidden: true
+  - name: content_block_c
+    type: field_group
+    config: {}
+    fields:
+    - name: full_image
+      type: file
+      config:
+        maxSize: 2
+      label: Full image
+    label: Content block C
+    hidden: true
+  - name: sections
+    type: field_group_list
+    fields:
+    - name: type
+      type: select
+      default: full-image
+      config:
+        required: false
+        options:
+        - full-image
+        - full-split-image
+        - content-equal-image
+        - content-large-image
+        - split-content-image
+        - small-content-image
+        source:
+          type: simple
+          section: 
+          file: 
+          path: 
+      label: Type
+    - name: title
+      type: text
+      config:
+        required: false
+      label: Title
+    - name: content
+      type: textarea
+      default: ''
+      config:
+        required: false
+        wysiwyg: true
+        schema:
+          format: html-blocks
+      label: Content
+    - name: images
+      type: image_gallery
+      config: {}
+      label: Images
+    config:
+      min: 
+      max: 
+      labelField: type
+    label: Sections
+  label: Resultaat
+- name: footer
+  type: field_group
+  config: {}
+  fields:
+  - name: full_image
+    type: file
+    config:
+      maxSize: 2
+    label: Full image
+  label: Footer
+pages:
+- content/nl/projecten/amstelkwartier-1b.md
+- content/nl/projecten/baak-54.md
+- content/nl/projecten/blikk.md
+- content/nl/projecten/blok-20-ijburg.md
+- content/nl/projecten/blok-26-woon.md
+- content/nl/projecten/brisk.md
+- content/nl/projecten/campus-twente.md
+- content/nl/projecten/cruquius-1.3.md
+- content/nl/projecten/de-kwekerij.md
+- content/nl/projecten/de-rokade.md
+- content/nl/projecten/eden-district.md
+- content/nl/projecten/europan-4.md
+- content/nl/projecten/funenhof.md
+- content/nl/projecten/noah.md
+- content/nl/projecten/plussenburgh.md
+- content/nl/projecten/pontsteiger.md
+- content/nl/projecten/roeivereniging-de-hoop.md
+- content/nl/projecten/roeivereniging-ric.md
+- content/nl/projecten/stepping-housing.md
+- content/nl/projecten/wiener-co.md
+- content/nl/projecten/xylino.md
+- content/nl/projecten/zuidblok-lieven.md

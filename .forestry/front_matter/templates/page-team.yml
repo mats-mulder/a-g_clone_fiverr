@@ -1,0 +1,97 @@
+---
+label: Page - Team
+hide_body: true
+fields:
+- name: image
+  type: file
+  config:
+    maxSize: 2
+  label: Image
+- name: title_parts
+  type: field_group
+  config: {}
+  fields:
+  - name: part_a
+    type: text
+    config:
+      required: true
+    label: Part A
+  - name: part_b
+    type: text
+    config:
+      required: true
+    label: Part B
+  - name: part_c
+    type: text
+    config:
+      required: true
+    label: Part C
+  label: Title
+- name: subtitle
+  type: text
+  config:
+    required: true
+  label: Subtitle
+- name: content
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Content
+- name: members
+  type: field_group_list
+  fields:
+  - name: name
+    type: text
+    config:
+      required: true
+    label: Name
+  - name: function
+    type: text
+    config:
+      required: true
+    label: Function
+  - name: email
+    type: text
+    config:
+      required: true
+    label: Email
+  - name: quote
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Quote
+  - name: image
+    type: file
+    config:
+      maxSize: 1
+    label: Image
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Members
+  hidden: true
+- name: office_images
+  type: image_gallery
+  config: {}
+  label: Office images
+  hidden: true
+- name: team
+  type: blocks
+  label: Team
+  template_types:
+  - component
+  - component-team-member
+  config:
+    min: 
+    max: 
+pages:
+- content/nl/team.md

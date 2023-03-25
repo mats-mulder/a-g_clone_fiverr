@@ -1,0 +1,176 @@
+---
+label: Page - Home
+hide_body: true
+fields:
+- name: intro
+  type: field_group
+  config: {}
+  fields:
+  - name: image
+    type: file
+    config:
+      maxSize: 2
+    label: Image
+  label: Intro
+- name: projecten
+  type: field_group
+  config: {}
+  fields:
+  - name: features
+    type: field_group_list
+    fields:
+    - name: sentence
+      type: text
+      config:
+        required: true
+      label: Sentence
+      description: Zin in totale omschrijving van drie zinnen (features)
+    - name: omschrijving
+      type: textarea
+      default: ''
+      config:
+        required: true
+        wysiwyg: false
+        schema:
+          format: markdown
+      label: Omschrijving
+    - name: projecten
+      type: list
+      config:
+        use_select: true
+        min: 0
+        max: 3
+        source:
+          type: pages
+          section: projecten
+          file: content/nl/projecten.md
+          path: ''
+      label: Projecten
+    config:
+      min: 3
+      max: 3
+      labelField: 
+    label: Features
+  - name: button
+    type: text
+    config:
+      required: true
+    label: Button project overzicht
+  label: Projecten
+- name: werkwijze
+  type: field_group
+  config: {}
+  fields:
+  - name: title
+    type: field_group
+    config: {}
+    fields:
+    - name: part_a
+      type: text
+      config:
+        required: true
+      label: Part A
+    - name: part_b
+      type: text
+      config:
+        required: true
+      label: Part B
+    - name: part_c
+      type: text
+      config:
+        required: true
+      label: Part C
+    label: Title
+  - name: subtitle
+    type: text
+    config:
+      required: false
+    label: Subtitle
+  - name: features
+    type: field_group_list
+    fields:
+    - name: title
+      type: text
+      config:
+        required: true
+      label: Title
+    - name: content
+      type: textarea
+      default: ''
+      config:
+        required: true
+        wysiwyg: false
+        schema:
+          format: markdown
+      label: Content
+    - name: image
+      type: file
+      config:
+        maxSize: 2
+      label: Image
+    config:
+      min: 3
+      max: 3
+      labelField: 
+    label: Features
+  - name: button_team
+    type: text
+    config:
+      required: true
+    label: Button team
+  label: Werkwijze
+- name: contact
+  type: field_group
+  config: {}
+  fields:
+  - name: title
+    type: text
+    config:
+      required: true
+    label: Title
+  - name: contact_method
+    type: field_group_list
+    fields:
+    - name: type
+      type: text
+      config:
+        required: true
+      label: Type
+    - name: details
+      type: textarea
+      default: ''
+      config:
+        required: true
+        wysiwyg: true
+        schema:
+          format: html-blocks
+      label: Details
+    - name: link
+      type: text
+      config:
+        required: false
+      label: Link (optional)
+      description: For example, mailto:info@overbelicht.com will open webmail.
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Contact method
+  - name: social_links
+    type: field_group
+    config: {}
+    fields:
+    - name: linkedin
+      type: text
+      config:
+        required: true
+      label: LinkedIn
+    - name: instagram
+      type: text
+      config:
+        required: false
+      label: Instagram
+    label: Social links
+  label: Contact
+pages:
+- content/nl/home.md

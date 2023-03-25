@@ -1,0 +1,33 @@
+---
+label: 'Component: Team member'
+hide_body: true
+display_field: name
+fields:
+- name: name
+  type: text
+  config:
+    required: true
+  label: Name
+- name: email
+  type: text
+  config:
+    required: false
+  label: Email
+- name: function
+  type: text
+  config:
+    required: false
+  label: Function
+- name: quote
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Quote
+- name: image
+  type: image_gallery
+  config: {}
+  label: Image
